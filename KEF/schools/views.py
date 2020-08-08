@@ -4,10 +4,16 @@ from django.contrib.auth.models import User, auth
 
 # Create your views here.
 def index(request):
-    return render(request, "schools/teacher/landing_page.html")
+    return render(request, "schools/main page/main.html")
 
 def profile(request):
-    return render(request,"schools/teacher/profile.html")
+    return render(request,"schools/main page/profile.html")
+
+
+
+def allcourses(request):
+    return render(request,"schools/teacher/allcourses.html")
+
 
 def login(request):
     if request.method == 'POST':
@@ -24,7 +30,7 @@ def login(request):
             return redirect('login')
 
     else:
-        return render(request,'schools/login.html')
+        return render(request,'schools/landing_page.html')
 
 def logout(request):
     auth.logout(request)
