@@ -1,6 +1,7 @@
 from django.db import models
 from django.db.models.signals import post_save
 from django.contrib.auth.models import User
+from datetime import datetime
 
 # Create your models here.
 class School(models.Model):
@@ -18,6 +19,14 @@ class Teacher(models.Model):
 
     def __str__(self):
         return self.user.username
+
+class Courses(models.Model):
+    course_name=models.CharField(max_length=200)
+    duration=models.TimeField()
+    date=models.DateTimeField(default=datetime.now,verbose_name=u"Add time")
+    teacher_id=models.ForeignKey(Teacher,on_delete=models.CASCADE)
+    description=models.CharField(max_length=500)
+    course_link=models.CharField(max_length=200)
 
 # def create_profile(sender, **kwargs):
 #     if kwargs['created']:

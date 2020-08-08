@@ -7,7 +7,14 @@ def index(request):
     return render(request, "schools/main page/main.html")
 
 def profile(request):
-    return render(request,"schools/teacher/profile.html")
+    return render(request,"schools/main page/profile.html")
+
+def about(request):
+    return render(request,"schools/main/about.html")
+
+def contact(request):
+    return render(request,"schools/main/contact.html")
+
 
 def login(request):
     if request.method == 'POST':
