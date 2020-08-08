@@ -4,7 +4,7 @@ from django.contrib.auth.models import User, auth
 
 # Create your views here.
 def index(request):
-    return render(request, "schools/teacher/landing_page.html")
+    return render(request, "schools/main page/main.html")
 
 def profile(request):
     return render(request,"schools/teacher/profile.html")
