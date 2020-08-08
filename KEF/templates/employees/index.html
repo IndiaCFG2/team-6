@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <script>
+    function yourfunction(radioid)
+{
+if(radioid == 1)
+{    
+   	document.getElementById('one').style.display = 'block';
+    document.getElementById('two').style.display = 'none';
+ }
+ else if(radioid == 2)
+{  
+	document.getElementById('one').style.display = 'none';
+	document.getElementById('two').style.display = 'block';
+}
+
+}
+  </script>
+  <title>Program Manager Login</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/heroic-features.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="/profile">About</i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Jumbotron Header -->
+    <div class="pageheader my-5">
+      <h1 class="display-5">This is the PM Login Page</h1>
+      <p class="lead">This page shows the details of the school</p>
+    </div>
+
+    <div >
+      Login info:
+    </div>
+    <!-- Page Features -->
+    <STRONG class="lead">Sort the school by:</STRONG></br> <br>
+    <div class="lead">
+      <INPUT TYPE='radio' NAME='filter' VALUE='time' onClick="javascript:return yourfunction(1)"> Time
+        <br />
+    <INPUT TYPE='radio' NAME='filter' VALUE='location' onClick="javascript:return yourfunction(2)"> Location
+      </div>
+    
+
+
+<div class ="lead" id = "one" style = "display:none">
+
+Month
+<select name="school">
+  <option name="month" value="january">January</option>
+  <option name="month" value="february">February</option>
+  <option name="month" value="march">March</option>
+  <option name="month" value="april">April</option>
+  <option name="month" value="may">May</option>
+  <option name="month" value="june">June</option>
+  <option name="month" value="july">July</option>
+  <option name="month" value="august">August</option>
+  <option name="month" value="september">September</option>
+  <option name="month" value="october">October</option>
+  <option name="month" value="november">November</option>
+  <option name="month" value="december">December</option>
+  
+</select>
+
+</div>
+
+
+<div class= "lead" id = "two" style = "display:none">
+City
+<select name="school">
+<option name="city" value="bengaluru">Bengaluru</option>
+    <option name="city" value="hyderabad">Hyderabad</option>
+    <option name="city" value="mumbai">Mumbai</option>
+</select>
+</div>
+<br />
+    <div class="row text-center">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="./images/School1.jpeg" alt="">
+          <div class="card-body">
+            <h4 class="card-title">School 1</h4>
+            <p class="card-text">Address 1</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="./images/School1.jpeg" alt="">
+          <div class="card-body">
+            <h4 class="card-title">School 2</h4>
+            <p class="card-text">Address 2</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="./images/School1.jpeg" alt="">
+          <div class="card-body">
+            <h4 class="card-title">School 3</h4>
+            <p class="card-text">Address 3</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="./images/School1.jpeg" alt="">
+          <div class="card-body">
+            <h4 class="card-title">School4</h4>
+            <p class="card-text">Address 4</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
