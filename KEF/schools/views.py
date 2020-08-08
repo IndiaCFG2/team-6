@@ -9,13 +9,9 @@ def index(request):
 def profile(request):
     return render(request,"schools/main page/profile.html")
 
-def about(request):
-    return render(request,"schools/main page/about.html")
 
-def contact(request):
-    return render(request,"schools/teacher/course.html")
 
-def contact(request):
+def allcourses(request):
     return render(request,"schools/teacher/allcourses.html")
 
 
