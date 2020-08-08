@@ -16,7 +16,9 @@ body {
     line-height: 2em;
     overflow-x: hidden;
 }
-
+.text-white{
+    color:white;
+}
 a {
     transition: all 0.3s ease;
     color: #666;
@@ -64,8 +66,14 @@ h2, p { color: #666666; }
     color: white;
 }
 
-.tm-bg-gray { background-colo: #F4F4F4; }
-.C { color: darkorange; }
+hr{
+    
+    width:30%;
+    border: 3px solid darkorange;
+    background-color:darkorange;
+}
+.tm-bg-gray { background-color: #F4F4F4; }
+.tm-text-primary{ color: darkorange; }
 .tm-text-secondary { color: #3cAFAF; }
 
 .tm-nav-link {
@@ -91,7 +99,7 @@ h2, p { color: #666666; }
     z-index: 999;
 }
 
-.about-background{
+.container-fluid .about-background{
 	background-color: black;
 }
 
