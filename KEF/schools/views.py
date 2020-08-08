@@ -10,10 +10,13 @@ def profile(request):
     return render(request,"schools/main page/profile.html")
 
 def about(request):
-    return render(request,"schools/main/about.html")
+    return render(request,"schools/main page/about.html")
 
 def contact(request):
-    return render(request,"schools/main/contact.html")
+    return render(request,"schools/teacher/course.html")
+
+def contact(request):
+    return render(request,"schools/teacher/allcourses.html")
 
 
 def login(request):
@@ -31,7 +34,7 @@ def login(request):
             return redirect('login')
 
     else:
-        return render(request,'schools/login.html')
+        return render(request,'schools/landing_page.html')
 
 def logout(request):
     auth.logout(request)

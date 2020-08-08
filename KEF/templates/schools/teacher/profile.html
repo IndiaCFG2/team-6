@@ -107,7 +107,7 @@
                         <div class="white-box">
                             <form class="form-horizontal form-material">
                                 <div class="form-group">
-                                    <label for="example-email" class="col-md-12">User Id</label>
+                                    <label for="example-email" class="col-md-12">User Id: {{Teacher.id}}</label>
                                     <div class="col-md-12">
                                         <input type="text" placeholder="121"
                                             class="form-control form-control-line" name="userid"
@@ -115,7 +115,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-md-12">Full Name</label>
+                                    <label class="col-md-12">Full Name: {{Teacher.name}} </label>
                                     <div class="col-md-12">
                                         <input type="text" placeholder="Johnathan Doe"
                                             class="form-control form-control-line" disabled> </div>
@@ -128,13 +128,13 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-12">Phone No</label>
+                                    <label class="col-md-12">Phone No: {{Teacher.email}}</label>
                                     <div class="col-md-12">
                                         <input type="text" placeholder="123 456 7890"
                                             class="form-control form-control-line" disbaled> </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-12">School</label>
+                                    <label class="col-sm-12">School: {{Teacher.School}}</label>
                                     <div class="col-sm-12">
                                         <div class="col-md-12">
                                             <input type="text" placeholder="school name"
@@ -143,7 +143,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12">
-                                        <button class="btn btn-success">Change Password</button>
+                                        <button class="btn btn-success">Change Password: {{Teacher.Password}}</button>
                                     </div>
                                 </div>
                             </form>
