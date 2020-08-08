@@ -1,3 +1,5 @@
+{% load static %}
+{% static "images" as baseUrl %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,18 +9,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% ../plugins/images/favicon.png %}">
     <title>Key Education Foundation</title>
     <!-- Bootstrap Core CSS -->
-    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% bootstrap/dist/css/bootstrap.min.css" rel="stylesheet %}">
     <!-- Menu CSS -->
-    <link href="../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <link href="{%../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css %}" rel="stylesheet %}">
     <!-- animation CSS -->
-    <link href="css/animate1.css" rel="stylesheet">
+    <link href="{% css/animate1.css %}" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="css/style1.css" rel="stylesheet">
+    <link href="{% css/style1.css %}" rel="stylesheet">
     <!-- color CSS -->
-    <link href="css/colors/default.css" id="theme" rel="stylesheet">
+    <link href="{% css/colors/default.css %}" id="theme" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -48,7 +50,7 @@
                 <ul class="nav navbar-top-links navbar-right pull-right">
                     <li>
                         <a class="nav-toggler open-close waves-effect waves-light hidden-md hidden-lg"
-                            href="javascript:void(0)"><i class="fa fa-bars"></i></a>
+                            href="{% javascript:void(0) %}"><i class="fa fa-bars"></i></a>
                     </li>
                    
                     <li>

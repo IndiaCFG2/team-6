@@ -1,3 +1,5 @@
+{% load static %}
+{% static "images" as baseUrl %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,18 +11,17 @@
     <script src='main.js'></script>
 </head>
 <body>
-    <form action="login" method="post">
-        {% csrf_token %}
-        <input type="text" name="username" placeholder="username"><br>
-        <input type="password" name="password" placeholder="password"><br>
-        <input type="Submit">
-    </form>
-
-
-    <div>
-            {% for message in messages %}
-            <h3> {{message}}  </h3>
-            {% endfor %}
-    </div>
+  <div>
+    {% for message in messages %}
+    <h3> {{message}}  </h3>
+    {% endfor %}
+  </div>
+  
+  <form action="login" method="post">
+      {% csrf_token %}
+      <input type="text" name="username" placeholder="username"><br>
+      <input type="password" name="password" placeholder="password"><br>
+      <input type="Submit">
+  </form>
 </body>
 </html>
