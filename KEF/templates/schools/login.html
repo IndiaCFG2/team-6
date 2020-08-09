@@ -1,27 +1,37 @@
-{% load static %}
-{% static "images" as baseUrl %}
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
-</head>
-<body>
-  <div>
-    {% for message in messages %}
-    <h3> {{message}}  </h3>
-    {% endfor %}
-  </div>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
-  <form method="post">
-      {% csrf_token %}
-      <input type="email" name="email" placeholder="Email Address"><br>
-      <input type="password" name="password" placeholder="password"><br>
-      <input type="Submit">
-  </form>
-</body>
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="sidenav container mt-5">
+             <div class="login-main-text">
+                <h2>Login Page</h2>
+                <p>Login or register from here to access.</p>
+             </div>
+          </div>
+          <div class="main container">
+             <div class="col-md-6 col-sm-12">
+                <div class="login-form">
+                   <form>
+                      <div class="form-group">
+                         <label>User Name</label>
+                         <input type="text" class="form-control" placeholder="User Name">
+                      </div>
+                      <div class="form-group">
+                         <label>Password</label>
+                         <input type="password" class="form-control" placeholder="Password">
+                      </div>
+                      <button type="submit" class="btn btn-black">Login</button>
+                      <button type="submit" class="btn btn-secondary">Register</button>
+                   </form>
+                </div>
+             </div>
+          </div>
+  </body>
 </html>

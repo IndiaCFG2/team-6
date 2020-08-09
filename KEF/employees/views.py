@@ -1,31 +1,29 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.contrib.auth.models import User, auth 
+from django.contrib.auth.models import User, auth
+from schools.forms import UserRegisterForm
+from schools.models import School
 
 def index(request):
+    schools = School.objects.all()
+    return render(request, 'employees/index.html', {'schools': schools})
 
-    emps = Employee.objects.all()
+def signup(request):
+    if request.method == 'POST':
+        form = UserRegisterForm(request.POST)
 
-    return render(request, "index.html", {'emps': emps})
-
-
-def login(request):
-    if request.method== 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
-
-        user = auth.authenticate(username=username,password=password)
-
-        if user is not None:
-            auth.login(request, user)
-            return redirect("/")
-        else:
-            messages.info(request,'invalid credentials')
-            return redirect('login')
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            messages.success(request, f'Account created for {username}!')
+            return redirect('index')
 
     else:
-        return render(request,'schools/login.html')    
+        form = UserRegisterForm()
+    return render(request, 'employees/register.html', {'form' : form})
 
-def logout(request):
-    auth.logout(request)
-    return redirect('/')   
+def course(request):
+    return render(request, 'employees/course.html')
+
+def tcher(request):
+    return render(request, 'employees/Tcher.html')

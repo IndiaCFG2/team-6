@@ -1,12 +1,24 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.contrib.auth.models import User, auth
-from .models import Teacher
-from django.contrib.auth import authenticate
+from .forms import UserRegisterForm
 
 # Create your views here.
 def index(request):
     return render(request, "schools/teacher/landing_page.html")
+
+def signup(request):
+    if request.method == 'POST':
+        form = UserRegisterForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            messages.success(request, f'Account created for {username}!')
+            return redirect('index')
+
+    else:
+        form = UserRegisterForm()
+    return render(request, 'schools/register.html', {'form' : form})
 
 def login(request):
     if request.method == 'POST':
@@ -15,7 +27,6 @@ def login(request):
         user = Teacher.objects.filter(email = email_id).first()
 
         if user is not None:
-            auth.login(request, user)
             return redirect('index')
 
         else:
