@@ -1,0 +1,226 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Catalog</title>
+    <link rel="stylesheet" href="{% static 'main_page/fontawesome/css/all.min.css' %}"> <!-- https://fontawesome.com/ -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- https://fonts.google.com/ -->
+    <link rel="stylesheet" href="{% static 'main_page/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main_page/css/templatemo-video-catalog.css' %}">
+<!--
+
+TemplateMo 552 Video Catalog
+
+https://templatemo.com/tm-552-video-catalog
+
+-->
+</head>
+
+<body>
+    <div class="tm-page-wrap mx-auto">
+        <div class="position-relative">
+            <div class="position-absolute tm-site-header">
+                <div class="container-fluid position-relative">
+                    <div class="row">
+                        <div class="col-5 col-md-8 ml-auto mr-0">
+                            <div class="tm-site-nav">
+                                <nav class="navbar navbar-expand-lg mr-0 ml-auto" id="tm-main-nav">
+                                    <button class="navbar-toggler tm-bg-black py-2 px-3 mr-0 ml-auto collapsed" type="button"
+                                        data-toggle="collapse" data-target="#navbar-nav" aria-controls="navbar-nav"
+                                        aria-expanded="false" aria-label="Toggle navigation">
+                                        <span>
+                                            <i class="fas fa-bars tm-menu-closed-icon"></i>
+                                            <i class="fas fa-times tm-menu-opened-icon"></i>
+                                        </span>
+                                    </button>
+                                    <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+									 <ul class="navbar-nav text-uppercase">
+                                            <li class="nav-item">
+                                                <a class="tm-text-primary mb-3 tm-catalog-item-title" href="#about">Our Program</a>
+                                            </li>
+                                        </ul>
+                                        </ul>
+                                        <ul class="navbar-nav text-uppercase">
+
+                                            <li class="nav-item">
+                                                <a class="tm-text-primary mb-3 tm-catalog-item-title" href="{% url 'login' %}">Login</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tm-video-container">
+                <video autoplay loop id="tm-video">
+                    <!-- <source src="video/sunset-timelapse-video.mp4" type="video/mp4"> -->
+                        <source src="{% static 'main_page/video/kef.mp4' %}" type="video/mp4">
+                </video>
+            </div>
+
+            <i id="tm-video-control-button" class="fas fa-pause"></i>
+        </div>
+
+
+
+        <div class="container-fluid">
+            <div id="content" class="mx-auto tm-content-container">
+                <main>
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="tm-page-title tm-text-primary mb-4">Our Workshops</h2>
+
+                        </div>
+                    </div>
+
+                    <div class="row tm-catalog-item-list">
+                        <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
+                            <div class="position-relative tm-thumbnail-container">
+                                <img src="{% static 'main_page/img/tn-01.jpeg' %}" alt="Image" class="img-fluid tm-catalog-item-img">
+                                <a href="https://www.youtube.com/watch?v=ylMZRoqjq7A&list=PLi7eEmku9VQIHWsMuJVMx4MkznCjkdYqa" class="position-absolute tm-img-overlay">
+                                    <i class="fas fa-play tm-overlay-icon"></i>
+                                </a>
+                            </div>
+                            <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                                <h3 class="tm-text-secondary mb-3 tm-catalog-item-title">Origami</h3>
+                                <p class="tm-catalog-item-text">Origami is the art of paper folding, which is often associated with Japanese culture. Increases child's creativity while having fun</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
+                            <div class="position-relative tm-thumbnail-container">
+                                <img src="{% static 'main_page/img/tn-02.jpeg' %}" alt="Image" class="img-fluid tm-catalog-item-img">
+                                <a href="https://www.youtube.com/watch?v=PwAW4oKUdg0&list=PLi7eEmku9VQKxCEvb0MNgYzcXGad66mWo&index=1" class="position-absolute tm-img-overlay">
+                                    <i class="fas fa-play tm-overlay-icon"></i>
+                                </a>
+                            </div>
+                            <div class="p-4 tm-bg-gray tm-catalog-item-description">
+							 <h3 class="tm-text-secondary mb-3 tm-catalog-item-title">The ABC Song</h3>
+                                <p class="tm-catalog-item-text">It is a song with letters of the alphabet. Those letters are colorful and animated. They will appear on the screen with a text sung</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
+                            <div class="position-relative tm-thumbnail-container">
+                                <img src="{% static 'main_page/img/tn-03.jpeg' %}" alt="Image" class="img-fluid tm-catalog-item-img">
+                                <a href="https://www.youtube.com/watch?v=Cztb-0cliGA&list=PLi7eEmku9VQLdgFpockQ1gR8eo1Sz_FRz" class="position-absolute tm-img-overlay">
+                                    <i class="fas fa-play tm-overlay-icon"></i>
+                                </a>
+                            </div>
+                            <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                                <h3 class="tm-text-secondary mb-3 tm-catalog-item-title">Learning through play</h3>
+                                <p class="tm-catalog-item-text">Through play a child has the oppurtunity to engage his imagination and explore his surroundings</p>
+                            </div>
+                        </div>
+                        </div>
+
+
+                </main>
+
+            </div>
+			<div class="about-background">
+			  <div class="mx-auto tm-content-container">
+					<div class="row mt-3 mb-5 pb-3">
+						<div class="col-12">
+                            <div class="mx-auto tm-about-text-container ">
+								<h2 class="tm-page-title mb-4 tm-text-primary" id="about">Our Program</h2>
+                                <div class="row">
+                                    <div class="col-md-6 text-white" >
+                                        <p style="font-size: 48px;font-weight:30px">HOLISTIC CHILD DEVELOPMENT</p><br><p style="padding-right: 20px; text-align:justify;"> The School Readiness Program aims to create conducive learning environments at school and at home by creating empowered parents, equipped teachers and enriched classrooms to ensure holistic development of each child. </p>
+                                       <br> <img src="{% static 'main_page/img/pic1.jpg' %}" alt="Image" class="img-fluid tm-catalog-item-img">
+
+                                    </div>
+                                    <div class="col-md-6 text-white" style="text-align:justify ;"> <ul><li><p style="font-size: 30px;font-weight: 30px;"> Enriched classrooms</p>
+                                    <p>We provide schools with comprehensive early childhood kit comprising fun, safe durable learning materials and age appropriate student workbooks.</p><br></li>
+                                    <li><p style="font-size: 30px;font-weight: 30px;">
+                                        Equipped Teachers</p>
+                                        <p>We have a year long teacher training and program  support model to ensure developmentally appropriate practices in classroom</p><br></li>
+                                        <li><p style="font-size: 30px;font-weight: 30px;">
+                                            Empowered Parents</p>
+                                            <p>We work with parents to build awareness on helping children better in their home environment through targeted workshops and home activity sheets.</p><br></li>
+                                    </ul>
+                                </div>
+                                </div>
+                            </div>
+						</div>
+					</div>
+				</div>
+            </div>
+        </div>
+                   	<!-- tm-content-container -->
+        </div>
+        <div class="row">
+            <br>
+        </div>
+
+    </div> <!-- .tm-page-wrap -->
+
+    <script src="{% static 'main_page/js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'main_page/js/bootstrap.min.js' %}"></script>
+    <script>
+        function setVideoSize() {
+            const vidWidth = 1920;
+            const vidHeight = 1080;
+            let windowWidth = window.innerWidth;
+            let newVidWidth = windowWidth;
+            let newVidHeight = windowWidth * vidHeight / vidWidth;
+            let marginLeft = 0;
+            let marginTop = 0;
+
+            if (newVidHeight < 500) {
+                newVidHeight = 500;
+                newVidWidth = newVidHeight * vidWidth / vidHeight;
+            }
+
+            if(newVidWidth > windowWidth) {
+                marginLeft = -((newVidWidth - windowWidth) / 2);
+            }
+
+            if(newVidHeight > 720) {
+                marginTop = -((newVidHeight - $('#tm-video-container').height()) / 2);
+            }
+
+            const tmVideo = $('#tm-video');
+
+            tmVideo.css('width', newVidWidth);
+            tmVideo.css('height', newVidHeight);
+            tmVideo.css('margin-left', marginLeft);
+            tmVideo.css('margin-top', marginTop);
+        }
+
+        $(document).ready(function () {
+            /************** Video background *********/
+
+            setVideoSize();
+
+            // Set video background size based on window size
+            let timeout;
+            window.onresize = function () {
+                clearTimeout(timeout);
+                timeout = setTimeout(setVideoSize, 100);
+            };
+
+            // Play/Pause button for video background
+            const btn = $("#tm-video-control-button");
+
+            btn.on("click", function (e) {
+                const video = document.getElementById("tm-video");
+                $(this).removeClass();
+
+                if (video.paused) {
+                    video.play();
+                    $(this).addClass("fas fa-pause");
+                } else {
+                    video.pause();
+                    $(this).addClass("fas fa-play");
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>

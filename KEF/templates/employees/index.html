@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,12 +13,12 @@
     function yourfunction(radioid)
 {
 if(radioid == 1)
-{    
+{
    	document.getElementById('one').style.display = 'block';
     document.getElementById('two').style.display = 'none';
  }
  else if(radioid == 2)
-{  
+{
 	document.getElementById('one').style.display = 'none';
 	document.getElementById('two').style.display = 'block';
 }
@@ -26,10 +28,11 @@ if(radioid == 1)
   <title>Program Manager Login</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{% static 'employees/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
 
   <!-- Custom styles for this template -->
-  <link href="css/heroic-features.css" rel="stylesheet">
+<link href="{% static 'employees/css/heroic-features.css' %}" rel="stylesheet">
 
 </head>
 
@@ -44,7 +47,7 @@ if(radioid == 1)
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="/profile">About</i></a>
+            <a class="nav-link active" href="{% url 'index' %}">Home</i></a>
           </li>
         </ul>
       </div>
@@ -53,7 +56,7 @@ if(radioid == 1)
 
   <!-- Page Content -->
   <div id="carouselExampleIndicators" class="carousel slide" style="height: 750px;" data-ride="carousel">
-    <!-- Indicators --> 
+    <!-- Indicators -->
     <ol class="carousel-indicators" >
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -62,13 +65,13 @@ if(radioid == 1)
     <!-- Wrapper for slides -->
     <div class="carousel-inner" style="height: 750px;">
       <div class="carousel-item active">
-        <img class="d-block w-100" src="images/pic1.jpg" alt="First slide">
+        <img class="d-block w-100" src="{% static 'employees/images/pic1.jpg' %}" alt="First slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="images/pic2.jpg" width="100%" alt="Second slide">
+        <img class="d-block w-100" src="{% static 'employees/images/pic2.jpg' %}" width="100%" alt="Second slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="images/pic3.jpg" alt="Third slide">
+        <img class="d-block w-100" src="{% static 'employees/images/pic3.jpg' %}" alt="Third slide">
       </div>
     </div>
     <!-- Left and right controls -->
@@ -83,7 +86,7 @@ if(radioid == 1)
   </div>
 
   <div class="container">
-    
+
     <!-- Jumbotron Header -->
     <br>
     <br>
@@ -96,11 +99,11 @@ if(radioid == 1)
     <!-- Page Features -->
     <div class="lead">
     Filter the school by:
-   
+
       <INPUT TYPE='radio' NAME='filter' VALUE='time' onClick="javascript:return yourfunction(1)"> Time
     <INPUT TYPE='radio' NAME='filter' VALUE='location' onClick="javascript:return yourfunction(2)"> Location
       </div>
-    
+
 
 
 <div class ="lead" id = "one" style = "display:none">
@@ -119,7 +122,7 @@ Month
   <option name="month" value="october">October</option>
   <option name="month" value="november">November</option>
   <option name="month" value="december">December</option>
-  
+
 </select>
 
 </div>
@@ -135,57 +138,20 @@ City
 </div>
 <br />
     <div class="row text-center">
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100">
-          <img class="card-img-top" src="./images/School1.jpeg" alt="">
-          <div class="card-body">
-            <h4 class="card-title">School 1</h4>
-            <p class="card-text">Address 1</p>
-          </div>
-          <div class="card-footer">
-            <a href="Tchers/Tcher.html" class="btn btn-primary">Find Out More!</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100">
-          <img class="card-img-top" src="./images/School1.jpeg" alt="">
-          <div class="card-body">
-            <h4 class="card-title">School 2</h4>
-            <p class="card-text">Address 2</p>
-          </div>
-          <div class="card-footer">
-            <a href="Tchers/Tcher.html" class="btn btn-primary">Find Out More!</a>
+      {% for school in schools %}
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card h-100">
+            <img class="card-img-top" src="{% static 'employees/images/School1.jpeg' %}" alt="">
+            <div class="card-body">
+              <h4 class="card-title">{{ school.name }}</h4>
+              <p class="card-text">{{ school.location }}</p>
+            </div>
+            <div class="card-footer">
+              <a href="{% url 'tcher' %}" class="btn btn-primary">Find Out More!</a>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100">
-          <img class="card-img-top" src="./images/School1.jpeg" alt="">
-          <div class="card-body">
-            <h4 class="card-title">School 3</h4>
-            <p class="card-text">Address 3</p>
-          </div>
-          <div class="card-footer">
-            <a href="Tchers/Tcher.html" class="btn btn-primary">Find Out More!</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100">
-          <img class="card-img-top" src="./images/School1.jpeg" alt="">
-          <div class="card-body">
-            <h4 class="card-title">School4</h4>
-            <p class="card-text">Address 4</p>
-          </div>
-          <div class="card-footer">
-            <a href="Tchers/Tcher.html" class="btn btn-primary">Find Out More!</a>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
 
     </div>
     <!-- /.row -->
@@ -201,8 +167,8 @@ City
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{% static 'employees/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'employees/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
 </body>
 

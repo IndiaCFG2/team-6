@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="sidenav container mt-5">
+             <div class="login-main-text">
+                <h2>Login Page</h2>
+                <p>Login or register from here to access.</p>
+                <br/>
+             </div>
+          </div>
+          {% for message in messages %}
+          <div class = "alert alert-{{ message.tags }}">
+            <h3> {{message}}  </h3>
+          </div>
+          {% endfor %}
+          <div class="main container">
+             <div class="col-md-6 col-sm-12">
+                <div class="login-form">
+                  <form method="post">
+                      {% csrf_token %}
+                      {{ form.as_p }}
+                      <button type = "submit">Login</button>
+                  </form>
+                </div>
+             </div>
+          </div>
+  </body>
+</html>

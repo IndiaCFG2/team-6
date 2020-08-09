@@ -1,9 +1,8 @@
 from django.db import models
+from django.utils import timezone
 
-# Create your models here.
-class Employee(models.Model):
-    id=models.IntegerField(auto_created=True, primary_key=True)
-    name = models.CharField(max_length=35)
-    email = models.EmailField(max_length=254)
-    password = models.CharField(max_length=50)
-
+class Workshop(models.Model):
+    title = models.CharField(max_length = 100)
+    description = models.TextField()
+    image = models.ImageField(upload_to = 'main_page/img')
+    date = models.DateTimeField(default = timezone.now)
