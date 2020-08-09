@@ -40,6 +40,10 @@ body {
   border-color: #007bff;
 }
 
+.tm-text-primary {
+  color: darkorange;
+}
+
 
 .section-header h3 {
   font-size: 48px;

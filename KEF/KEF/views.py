@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 
 def workshops(request):
-    return render(request, 'main_page/video-page.html')
+    return render(request, 'main_page/main.html')
 
 def about(request):
     return render(request, 'main_page/about.html')
