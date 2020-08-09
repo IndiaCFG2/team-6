@@ -4,7 +4,14 @@ from .forms import UserRegisterForm
 
 # Create your views here.
 def index(request):
-    return render(request, "schools/teacher/landing_page.html")
+    return render(request, "main_page/main.html")
+
+def profile(request):
+    return render(request,"main_page/profile.html")
+
+def allcourses(request):
+    return render(request,"schools/teacher/allcourses.html")
+
 
 def signup(request):
     if request.method == 'POST':

@@ -1835,6 +1835,10 @@ h6 {
   color: darkorange;
   text-align: center;
   font-weight: 700;
+<<<<<<< HEAD:KEF/static/employees/Tchers/css/style.css
+=======
+  padding-bottom: 30px;
+>>>>>>> c1613826d7d266cc33bc4a11890d1f2ebc818cc3:KEF/templates/employees/Tchers/css/style.css
   position: relative;
 }
 
