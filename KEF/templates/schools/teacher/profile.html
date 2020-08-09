@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,18 +9,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'profile/plugins/images/favicon.png' %}">
     <title>Key Education Foundation</title>
     <!-- Bootstrap Core CSS -->
-    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'profile/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
     <!-- Menu CSS -->
-    <link href="../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <link href="{% static 'profile/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css' %}" rel="stylesheet">
     <!-- animation CSS -->
-    <link href="css/animate1.css" rel="stylesheet">
+    <link href="{% static 'profile/css/animate1.css' %}" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="css/style1.css" rel="stylesheet">
+    <link href="{% static 'profile/css/style1.css' %}" rel="stylesheet">
     <!-- color CSS -->
-    <link href="css/colors/default.css" id="theme" rel="stylesheet">
+    <link href="{% static 'profile/css/colors/default.css' %}" id="theme" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -50,9 +52,9 @@
                         <a class="nav-toggler open-close waves-effect waves-light hidden-md hidden-lg"
                             href="javascript:void(0)"><i class="fa fa-bars"></i></a>
                     </li>
-                   
+
                     <li>
-                        <a class="profile-pic" href="profile.html"> 
+                        <a class="profile-pic" href="{% url 'profile' %}">
                             <span class="glyphicon glyphicon-user"></span>&nbsp; &nbsp;
                             <b class="hidden-xs">UserName</b></a>
                     </li>
@@ -66,7 +68,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
                         <h4 class="page-title">Profile page</h4>
                     </div>
-                    
+
                 </div>
                 <!-- /.row -->
                 <!-- .row -->
@@ -120,7 +122,7 @@
                                         <input type="text" placeholder="Johnathan Doe"
                                             class="form-control form-control-line" disabled> </div>
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <label class="col-md-12">Password</label>
                                     <div class="col-md-12">
@@ -159,17 +161,17 @@
     </div>
     <!-- /#wrapper -->
     <!-- jQuery -->
-    <script src="../plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="{% static 'profile/plugins/bower_components/jquery/dist/jquery.min.js' %}"></script>
     <!-- Bootstrap Core JavaScript -->
-    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="{% static 'profile/bootstrap/dist/js/bootstrap.min.js' %}"></script>
     <!-- Menu Plugin JavaScript -->
-    <script src="../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
+    <script src="{% static 'profile/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js' %}"></script>
     <!--slimscroll JavaScript -->
-    <script src="js/jquery.slimscroll.js"></script>
+    <script src="{% static 'profile/js/jquery.slimscroll.js' %}"></script>
     <!--Wave Effects -->
-    <script src="js/waves.js"></script>
+    <script src="{% static 'profile/js/waves.js' %}"></script>
     <!-- Custom Theme JavaScript -->
-    <script src="js/custom.min.js"></script>
+    <script src="{% static 'profile/js/custom.min.js' %}"></script>
 </body>
 
 </html>

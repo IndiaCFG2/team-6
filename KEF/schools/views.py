@@ -1,16 +1,20 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import UserRegisterForm
+from .models import Courses
 
 # Create your views here.
 def index(request):
-    return render(request, "main_page/main.html")
+    return render(request, "schools/teacher/landing_page.html")
 
 def profile(request):
-    return render(request,"main_page/profile.html")
+    return render(request,"schools/teacher/profile.html")
 
 def allcourses(request):
-    return render(request,"schools/teacher/allcourses.html")
+    courses=Courses.objects.all()
+    
+    return render(request,"schools/teacher/allcourses.html",{'courses':courses})
+
 
 
 def signup(request):
